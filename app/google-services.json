@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "41609561787",
+    "project_id": "lugares-semana",
+    "storage_bucket": "lugares-semana.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:41609561787:android:b8ba0ec592e586fa0e8b9e",
+        "android_client_info": {
+          "package_name": "com.example.lugar_semanal2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "41609561787-55jddmjqc98jpifs55begv86n64vgau9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhIOcFbsKmLt-hpDsJU8mE1bkHGOnwGcI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "41609561787-55jddmjqc98jpifs55begv86n64vgau9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:41609561787:android:07de04ef142d3a550e8b9e",
+        "android_client_info": {
+          "package_name": "com.lugares_semanal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "41609561787-55jddmjqc98jpifs55begv86n64vgau9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhIOcFbsKmLt-hpDsJU8mE1bkHGOnwGcI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "41609561787-55jddmjqc98jpifs55begv86n64vgau9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
