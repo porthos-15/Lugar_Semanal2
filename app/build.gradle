@@ -2,8 +2,15 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'com.google.gms.google-services'
+    id 'kotlin-android'
+    id 'kotlin-parcelize'
+    id 'androidx.navigation.safeargs.kotlin'
 }
-
+//Para generar un enlace diorecto con la vitsa XML y el codigo KT : KOKLIN BABE
+android.buildFeatures.viewBinding true
+apply plugin : 'com.google.gms.google-services'//agregado
+apply plugin: 'kotlin-kapt'
+apply plugin: 'androidx.navigation.safeargs.kotlin'
 android {
     namespace 'com.example.lugar_semanal2'
     compileSdk 33
@@ -31,6 +38,9 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
@@ -39,8 +49,38 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation 'com.google.android.material:material:1.7.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    implementation 'com.google.firebase:firebase-auth-ktx:21.1.0'
+    implementation 'com.google.firebase:firebase-common-ktx:20.2.0'
     implementation 'com.google.firebase:firebase-auth:21.1.0'
+
+
+    implementation 'androidx.room:room-common:2.4.3'
+    implementation 'androidx.room:room-ktx:2.4.3'
+    implementation 'com.google.android.gms:play-services-home:16.0.0-beta1'
+
+
+
+
+    //noinspection GradleCompatible,GradleCompatible
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:2.0.4'
+    implementation 'android.arch.lifecycle:livedata:1.1.1'
+    implementation 'android.arch.lifecycle:viewmodel:1.1.1'
+    //nagacion de fragmentos
+    implementation"androidx.navigation:navigation-fragment-ktx:2.5.3"
+    implementation"androidx.navigation:navigation-ui-ktx:2.5.3"
+    implementation"androidx.navigation:navigation-dynamic-features-fragment:2.5.3"
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
+
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
+    //se agregan para poder utilizar las anotaciones @Entity Estado y demas
+
+    annotationProcessor 'androidx.room:room-compiler-processing:2.4.3'
+    kapt "androidx.room:room-compiler:2.4.3"
+    implementation 'androidx.room:room-ktx:2.4.3'
+
 }
