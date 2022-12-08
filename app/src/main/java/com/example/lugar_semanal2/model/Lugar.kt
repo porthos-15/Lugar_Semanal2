@@ -31,35 +31,5 @@ data class Lugar(
     val rutaAudio: String?,
     @ColumnInfo(name="ruta_imagen")
     val rutaImagen: String?
-) : Parcelable {
-    constructor(parcel: Parcel) : this(
-        parcel.readInt(),
-        parcel.readString(),
-        parcel.readString(),
-        parcel.readString(),
-        parcel.readValue(Double::class.java.classLoader) as? Double,
-        parcel.readValue(Double::class.java.classLoader) as? Double,
-        parcel.readValue(Double::class.java.classLoader) as? Double,
-        parcel.readString(),
-        parcel.readString()
-    )
+):Parcelable
 
-    companion object : Parceler<Lugar> {
-
-        override fun Lugar.write(parcel: Parcel, flags: Int) {
-            parcel.writeInt(id)
-            parcel.writeString(nombre)
-            parcel.writeString(correo)
-            parcel.writeString(telefono)
-            parcel.writeValue(latitud)
-            parcel.writeValue(longitud)
-            parcel.writeValue(altura)
-            parcel.writeString(rutaAudio)
-            parcel.writeString(rutaImagen)
-        }
-
-        override fun create(parcel: Parcel): Lugar {
-            return Lugar(parcel)
-        }
-    }
-}

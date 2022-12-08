@@ -8,7 +8,9 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.get
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.lugar_semanal2.R
+import com.example.lugar_semanal2.adapter.LugarAdapter
 
 import com.example.lugar_semanal2.databinding.FragmentLugarBinding
 import com.example.lugar_semanal2.viewmodel.LugarViewModel
@@ -28,7 +30,15 @@ private lateinit var lugarViewModel: LugarViewModel
          binding.addLugarFatBt.setOnClickListener{
              findNavController().navigate(R.id.action_nav_lugar_to_addLugarFragment)
          }
+//Activar el Recycler View con la vista de lugares usando el  Adapter..
+        val lugarAdapter=LugarAdapter()
+        val reciclador = binding.reciclador
+        reciclador.adapter = lugarAdapter
+        reciclador.layoutManager = LinearLayoutManager(requireContext())
 
+          lugarViewModel.getLugares.observe(viewLifecycleOwner){
+              lugares -> lugarAdapter.setLugares(lugares)
+          }
         return binding.root
     }
 
