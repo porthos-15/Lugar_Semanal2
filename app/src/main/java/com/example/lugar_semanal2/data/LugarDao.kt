@@ -1,13 +1,9 @@
 package com.example.lugar_semanal2.data
 import androidx.lifecycle.LiveData
-import androidx.room.Delete
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
-import androidx.room.Update
+import androidx.room.*
 import com.example.lugar_semanal2.model.Lugar
 
-
+@Dao
 interface LugarDao {
     //CRUD  = Create Read Update Delete
 

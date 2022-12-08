@@ -6,12 +6,19 @@ import com.example.lugar_semanal2.model.Lugar
 
 
 class LugarRepository(private val lugarDao: LugarDao) {
-    suspend fun addLugar(lugar: Lugar) {
-        lugarDao.addLugar(lugar)
+    suspend fun saveLugar(lugar: Lugar){
+        if (lugar.id==0){ // es un lugar nuevo... se inserta
+            lugarDao.addLugar(lugar)
+
+        }else{
+            lugarDao.updateLugar(lugar)
+
+
+        }
+
     }
-    suspend fun updateLugar(lugar: Lugar) {
-        lugarDao.updateLugar(lugar)
-    }
+
+
     suspend fun deleteLugar(lugar: Lugar) {
         lugarDao.deleteLugar(lugar)
     }
